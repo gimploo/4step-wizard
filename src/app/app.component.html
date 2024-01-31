@@ -3,8 +3,7 @@
         <h1>4 step wizard</h1>
     </div>
     
-    <!-- Content for the bottom part of the wizard -->
     <div wizard-bottom>
-        <p class="wizard-desc">{{activeNode.description}}</p>
+        <p class="wizard-desc"><strong>Step {{activeNode.idx + 1}}</strong>: {{activeNode.description}}</p>
     </div>
 </app-stepwizard>

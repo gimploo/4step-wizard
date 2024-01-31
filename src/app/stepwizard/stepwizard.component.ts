@@ -22,18 +22,22 @@ export class StepwizardComponent implements OnInit {
 
     this.nodes = [
       {
+        idx: 0,
         image_url : 'https://img.icons8.com/?size=256&id=843&format=png',
         description: 'Folder '
       },
       {
+        idx: 1,
         image_url : 'https://img.icons8.com/?size=256&id=2025&format=png',
         description: 'Pen'
       },
       {
+        idx: 2,
         image_url : 'https://img.icons8.com/?size=256&id=6552&format=png',
         description: 'Paper'
       },
       {
+        idx: 3,
         image_url : 'https://img.icons8.com/?size=256&id=11697&format=png',
         description: 'Completed'
       },
@@ -73,6 +77,7 @@ export class StepwizardComponent implements OnInit {
 }
 
 export interface WizardNode {
+  idx: number,
   image_url: string,
   description: string,
 }

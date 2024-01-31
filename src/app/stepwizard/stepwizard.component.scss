@@ -1,0 +1,68 @@
+.wizard-main {
+    padding: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.highlight {
+    background-color: lightcyan;
+}
+
+.wizard {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__label {
+        width: 470px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 25px;
+            
+        &-value {
+            font-size: 20px;
+            text-align: center;
+            border-style: double;
+            border-radius: 20px;
+            background-color: lightblue;
+            padding: 10px;
+            text-wrap: wrap;
+        }
+    }
+
+    &__button {
+        width: 100px;
+        height: auto;
+        border-radius: 10px;
+        padding: 8px;
+
+        color: white;
+
+        &:hover {
+            background-color: gray;
+        }
+
+        &--prev {
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        &--next {
+            background-color: lightgreen;
+            &:hover {
+                background-color: rgb(190, 245, 190);
+            }
+            padding: 10px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.wizard-bottom-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    gap: 20px;
+}

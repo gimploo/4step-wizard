@@ -1,14 +1,24 @@
-<div>
+<div class="wizard">
     <div class="wizard-top">
         <ng-content select="[wizard-top]"></ng-content>
     </div>
 
     <div class="wizard-main">
+
         <div class="wizard__label">
-            <label class="wizard__label-value">This</label>
-        </div>
         <ng-container *ngFor="let node of nodes; let idx=index">
-            <img (click)='selectNodeOnClick(idx)' width='20' height="20" [src]='node.image_url' class="wizard__button">
+                <label [ngClass]="{'hidden': (activeNode.idx) != idx}" class="wizard__label-value">
+                    {{node.description}}
+                </label>
+        </ng-container>
+        </div>
+
+        <ng-container *ngFor="let node of nodes; let idx=index">
+            <img 
+            [ngClass]="{'highlight' : (activeNode.idx == idx)}"
+            (click)='selectNodeOnClick(idx)' 
+            [src]='node.image_url' 
+            class="wizard__button">
         </ng-container>
     </div>
 
