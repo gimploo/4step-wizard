@@ -24,22 +24,26 @@ export class StepwizardComponent implements OnInit {
       {
         idx: 0,
         image_url : 'https://img.icons8.com/?size=256&id=843&format=png',
-        description: 'Folder '
+        description: 'Folder ',
+        isvisited : false
       },
       {
         idx: 1,
         image_url : 'https://img.icons8.com/?size=256&id=2025&format=png',
-        description: 'Pen'
+        description: 'Pen',
+        isvisited: false
       },
       {
         idx: 2,
         image_url : 'https://img.icons8.com/?size=256&id=6552&format=png',
-        description: 'Paper'
+        description: 'Paper',
+        isvisited: false
       },
       {
         idx: 3,
         image_url : 'https://img.icons8.com/?size=256&id=11697&format=png',
-        description: 'Completed'
+        description: 'Completed',
+        isvisited: false,
       },
     ];
     this.__setActiveNode();
@@ -48,12 +52,16 @@ export class StepwizardComponent implements OnInit {
   private __setActiveNode()
   {
     this.activeNode = this.nodes[this.activeNodeIndex];
+    this.activeNode.isvisited = true;
 
     this.emitNode.emit(this.activeNode);
   }
 
   public selectNodeOnClick(idx: number)
   {
+    if (idx > this.activeNodeIndex 
+      && !this.nodes[idx].isvisited) return;
+
     this.activeNodeIndex = idx;
     this.__setActiveNode();
   }
@@ -80,4 +88,5 @@ export interface WizardNode {
   idx: number,
   image_url: string,
   description: string,
+  isvisited: boolean
 }

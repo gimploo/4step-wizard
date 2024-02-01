@@ -10,6 +10,10 @@
     background-color: lightcyan;
 }
 
+.visited {
+    opacity: 1;
+}
+
 .wizard {
     width: 800px;
     margin-left: auto;
@@ -26,7 +30,7 @@
             text-align: center;
             border-style: double;
             border-radius: 20px;
-            background-color: lightblue;
+            background-color: lightyellow;
             padding: 10px;
             text-wrap: wrap;
         }
@@ -35,8 +39,9 @@
     &__button {
         width: 100px;
         height: auto;
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 8px;
+        opacity: 1;
 
         color: white;
 
