@@ -17,7 +17,6 @@
         <ng-container *ngFor="let node of nodes; let idx=index">
             <img 
             [ngClass]="{'highlight' : (activeNode.idx == idx)}"
-            (click)='selectNodeOnClick(idx)' 
             [src]='node.image_url' 
             class="wizard__button">
         </ng-container>
